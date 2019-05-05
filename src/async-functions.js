@@ -6,7 +6,7 @@ const giveItBackLater = (value, callback) => {
 };
 
 const addSomePromises = somePromise => {
-  return new Promise(resolve => resolve(somePromise))
+  return new Promise((resolve, reject) => resolve(somePromise))
     .then(result => result.repeat(2))
     .catch(error => error.repeat(3));
 };

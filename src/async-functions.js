@@ -14,7 +14,7 @@ const addSomePromises = somePromise => {
 const promiseToGiveItBackLater = value => {
   return new Promise((resolve, reject) => {
     const giveItBack = () => {
-      if (Math.random(value) < 0.5 || Math.random(value > 0.5)) {
+      if (typeof value === "string") {
         resolve(value);
       } else {
         reject("Something went bad!");
